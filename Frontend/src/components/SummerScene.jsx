@@ -61,7 +61,7 @@ export default function SummerScene() {
         </div>
       </div>
 
-      <span className="art__caption">Members’ edition</span>
+      <span className="art__caption">VIP members’ edition</span>
     </div>
   );
 }

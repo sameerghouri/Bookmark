@@ -148,6 +148,7 @@ function App() {
   };
 
   const hasFilters = tagFilter !== 'all' || favoritesOnly || search.trim() !== '';
+  const favoriteCount = bookmarks.filter((bookmark) => bookmark.isFavorite).length;
 
   return (
     <div className="app">
@@ -178,8 +179,7 @@ function App() {
             </span>
             <span className="hero__stats-dot" aria-hidden="true" />
             <span>
-              <strong>{bookmarks.filter((bookmark) => bookmark.isFavorite).length}</strong>{' '}
-              favorites
+              <strong>{favoriteCount}</strong> {favoriteCount === 1 ? 'favorite' : 'favorites'}
             </span>
           </div>
         </div>
