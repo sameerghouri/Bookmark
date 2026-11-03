@@ -12,7 +12,7 @@ A small full-stack MERN app for saving useful links. Create bookmarks, favorite 
 - **Favorite** toggle (optimistic UI) and **delete**
 - **Search** by title and a **Favorites only** toggle (client-side)
 - **Edit** an existing bookmark (bonus `PUT` route + prefilled form)
-- **Summer VIP theme** with a CSS 3D flip card, orbit rings, palm silhouettes, and canvas sparkles (no extra 3D library)
+- **Editorial summer VIP hero** with a floating 3D membership card (pure CSS 3D, subtle motion, no extra library)
 - Loading skeletons, empty states, and error messages with retry
 - Fully responsive, keyboard accessible, and respects `prefers-reduced-motion`
 

@@ -153,48 +153,38 @@ function App() {
     <div className="app">
       <header className="hero">
         <div className="hero__content">
-          <span className="vip-badge">
-            <span className="vip-badge__star" aria-hidden="true">
-              ★
+          <p className="hero__kicker">
+            <span className="hero__seal" aria-hidden="true">
+              B
             </span>
-            Summer VIP Edition
-          </span>
+            <span>The Summer Edit</span>
+            <span className="hero__kicker-sep" aria-hidden="true" />
+            <span className="hero__kicker-year">2026</span>
+          </p>
 
           <h1>
-            Keep your best links
-            <em>sun-kissed.</em>
+            A summer shelf for the <em>links worth keeping.</em>
           </h1>
 
           <p className="hero__lede">
-            A premium little shelf for the links you love — save, star, and filter your
-            summer reading list in one sunny place.
+            Save the articles, tools and little corners of the internet you want to come
+            back to. Star the essentials, tag the rest, and let everything else go.
           </p>
 
           <div className="hero__stats" aria-label="Summary">
-            <span className="hero__stat">
-              <strong>{visibleBookmarks.length}</strong>
-              <span>{hasFilters ? 'matching' : 'links saved'}</span>
+            <span>
+              <strong>{visibleBookmarks.length}</strong>{' '}
+              {hasFilters ? 'matching' : 'saved'}
             </span>
-            <span className="hero__stat">
-              <strong>{bookmarks.filter((bookmark) => bookmark.isFavorite).length}</strong>
-              <span>favorites</span>
+            <span className="hero__stats-dot" aria-hidden="true" />
+            <span>
+              <strong>{bookmarks.filter((bookmark) => bookmark.isFavorite).length}</strong>{' '}
+              favorites
             </span>
           </div>
         </div>
 
         <SummerScene />
-
-        <svg
-          className="hero__wave"
-          viewBox="0 0 1440 90"
-          preserveAspectRatio="none"
-          aria-hidden="true"
-        >
-          <path
-            className="hero__wave-path"
-            d="M0,46 C220,86 430,8 720,40 C1010,72 1220,18 1440,44 L1440,90 L0,90 Z"
-          />
-        </svg>
       </header>
 
       {error && (
