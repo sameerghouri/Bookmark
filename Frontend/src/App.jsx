@@ -3,6 +3,7 @@ import './App.css';
 import BookmarkForm from './components/BookmarkForm';
 import BookmarkList from './components/BookmarkList';
 import FilterBar from './components/FilterBar';
+import SummerScene from './components/SummerScene';
 import {
   createBookmark,
   deleteBookmark,
@@ -150,27 +151,50 @@ function App() {
 
   return (
     <div className="app">
-      <header className="app-header">
-        <div className="brand">
-          <span className="brand__mark" aria-hidden="true">
-            🔖
+      <header className="hero">
+        <div className="hero__content">
+          <span className="vip-badge">
+            <span className="vip-badge__star" aria-hidden="true">
+              ★
+            </span>
+            Summer VIP Edition
           </span>
-          <div>
-            <p className="brand__eyebrow">Mini MERN app</p>
-            <h1>Bookmark Manager</h1>
+
+          <h1>
+            Keep your best links
+            <em>sun-kissed.</em>
+          </h1>
+
+          <p className="hero__lede">
+            A premium little shelf for the links you love — save, star, and filter your
+            summer reading list in one sunny place.
+          </p>
+
+          <div className="hero__stats" aria-label="Summary">
+            <span className="hero__stat">
+              <strong>{visibleBookmarks.length}</strong>
+              <span>{hasFilters ? 'matching' : 'links saved'}</span>
+            </span>
+            <span className="hero__stat">
+              <strong>{bookmarks.filter((bookmark) => bookmark.isFavorite).length}</strong>
+              <span>favorites</span>
+            </span>
           </div>
         </div>
 
-        <div className="stats" aria-label="Summary">
-          <span className="stat">
-            <strong>{visibleBookmarks.length}</strong>
-            {hasFilters ? ' matching' : ' saved'}
-          </span>
-          <span className="stat">
-            <strong>{bookmarks.filter((bookmark) => bookmark.isFavorite).length}</strong>
-            favorites
-          </span>
-        </div>
+        <SummerScene />
+
+        <svg
+          className="hero__wave"
+          viewBox="0 0 1440 90"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            className="hero__wave-path"
+            d="M0,46 C220,86 430,8 720,40 C1010,72 1220,18 1440,44 L1440,90 L0,90 Z"
+          />
+        </svg>
       </header>
 
       {error && (

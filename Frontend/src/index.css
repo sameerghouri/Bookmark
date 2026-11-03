@@ -1,23 +1,27 @@
 :root {
-  --bg: #f5f3ff;
-  --surface: #ffffff;
-  --surface-soft: #faf9ff;
-  --text: #1e1b2e;
-  --muted: #6f6b85;
-  --border: #e6e2f2;
-  --primary: #6d4aff;
-  --primary-dark: #5636e6;
-  --primary-soft: #efeaff;
-  --accent: #f5a524;
-  --danger: #e5484d;
-  --danger-soft: #fdecec;
-  --shadow: 0 18px 40px -24px rgba(45, 32, 95, 0.35);
-  --radius: 16px;
+  --page-top: #fdf6e8;
+  --page-mid: #fffaf0;
+  --page-bottom: #eaf9fb;
+  --ink: #0c3a46;
+  --ink-soft: #355864;
+  --muted: #64818a;
+  --teal: #0e6d78;
+  --teal-deep: #06323f;
+  --aqua: #19b6c4;
+  --coral: #ff6f59;
+  --gold: #f2b73f;
+  --gold-soft: #ffe3a3;
+  --card: #fffdf8;
+  --line: rgba(12, 58, 70, 0.11);
+  --shadow: 0 22px 48px -30px rgba(7, 66, 78, 0.5);
+  --radius: 20px;
+  --font-body: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
 
-  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
-  line-height: 1.5;
-  color: var(--text);
-  background-color: var(--bg);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  color: var(--ink);
+  background-color: var(--page-top);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,14 +32,20 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
   background:
-    radial-gradient(900px 500px at 10% -10%, rgba(109, 74, 255, 0.16), transparent 60%),
-    radial-gradient(700px 500px at 100% 0%, rgba(245, 165, 36, 0.14), transparent 55%),
-    var(--bg);
+    radial-gradient(900px 620px at 88% -8%, rgba(255, 199, 98, 0.24), transparent 62%),
+    radial-gradient(820px 520px at -12% 28%, rgba(25, 182, 196, 0.15), transparent 62%),
+    radial-gradient(700px 500px at 70% 100%, rgba(255, 111, 89, 0.1), transparent 65%),
+    linear-gradient(180deg, var(--page-top) 0%, var(--page-mid) 24%, var(--page-bottom) 100%);
+  background-attachment: fixed;
 }
 
 h1,
@@ -63,6 +73,11 @@ a {
 }
 
 ::selection {
-  background: var(--primary);
-  color: #fff;
+  color: #06323f;
+  background: #ffe3a3;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(25, 182, 196, 0.55);
+  outline-offset: 2px;
 }
